@@ -8,7 +8,7 @@
 
 body {
   background: linear-gradient(135deg, #fdd835, #f97f51, #f78ca0, #ffffff);
-  min-height: 100vh; /* Ensure it covers the entire viewport */
+  min-height: 100vh;
 }
 
 .wrapper {
@@ -16,7 +16,7 @@ body {
   font-size: 16px;
   max-width: 43.753em;
   margin: 1em auto;
-  background: linear-gradient(135deg, #6d83f2, #8f87f4, #bf79f4, #f473d4); /* Apply gradient background */
+  background: linear-gradient(135deg, #6d83f2, #8f87f4, #bf79f4, #f473d4);
   border-radius: 1em;
   padding: 2em;
   box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.1);
@@ -127,6 +127,10 @@ body {
   background-image: linear-gradient(135deg, #4663c6, #587ef4);
 }
 
+#show-diagram {
+  margin-bottom: 1em;
+}
+
 .list {
   background-color: #fff;
   padding: 2em 1.5em;
@@ -192,4 +196,14 @@ body {
 }
 .edit:hover, .delete:hover {
   color: #2859f1;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.chart-container {
+  width: 250px;
+  height: 250px;
+  margin: 1em auto;
+  padding: 1em;
+  box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+  border-radius: 0.5em;
+  background: white;
+}

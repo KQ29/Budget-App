@@ -3,11 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css"> 
-    <title>Budget App</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Budget App with Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
 </head>
 
 <body>
@@ -33,6 +33,13 @@
                     </p>
                     <input type="text" class="product-title" id="product-title" placeholder="Enter Title Of Product">
                     <input type="number" id="user-amount" placeholder="Enter Cost Of Product">
+                    <select id="category-select"> 
+                        <option value="0">Food</option>
+                        <option value="1">Transport</option>
+                        <option value="2">Entertainment</option>
+                        <option value="3">Medical</option>
+                        <option value="4">Other</option>
+                    </select>
                     <button class="submit" id="check-amount">Check Amount</button>
                 </div>
             </div>
@@ -40,34 +47,33 @@
             <div class="output-container flex-space">
                 <div>
                     <p>Total Budget</p>
-                    <span id="amount">
-                        0
-                    </span>
+                    <span id="amount">0</span>
                 </div>
                 <div>
                     <p>Expenses</p>
-                    <span id="expenditure-value">
-                        0
-                    </span>
+                    <span id="expenditure-value">0</span>
                 </div>
                 <div>
                     <p>Balance</p>
-                    <span id="balance-amount">
-                        0
-                    </span>
+                    <span id="balance-amount">0</span>
                 </div>
             </div>
-        </div>
 
-        <div class="list">
-            <h3>Expenses List</h3>
-            <div class="list-container" id="list"></div>
-        </div>
+            <button id="show-diagram" class="submit">Show Diagram</button>
 
+            <div class="chart-container hide" id="chart-container"> 
+                <canvas id="expensesChart"></canvas> 
+            </div>
+
+            <div class="list">
+                <h3>Expenses List</h3>
+                <div class="list-container" id="list"></div>
+            </div>
+        </div>
     </div>
 
-
     <script src="script.js"></script>
+    <script src="chart.js"></script>
 </body>
 
 </html>
