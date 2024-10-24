@@ -140,10 +140,14 @@ body {
     }
 }
 
+#show-diagram {
+    margin-bottom: 1em;
+}
+
 .list {
     background-color: #fff;
     padding: 2em 1.5em;
-    box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+    box-shadow: 0 0.6em 1.2em $box-shadow-color;
     border-radius: 0.8em;
     transition: all $transition-duration ease-in-out;
 }
@@ -205,4 +209,14 @@ body {
     &:hover {
         color: darken($primary-color, 10%);
     }
+}
+
+.chart-container {
+    width: 250px;
+    height: 250px;
+    margin: 1em auto;
+    padding: 1em;
+    box-shadow: 0 0.6em 1.2em $box-shadow-color;
+    border-radius: 0.5em;
+    background: white;
 }
