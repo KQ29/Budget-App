@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// Variables for colors and transitions
+$primary-color: #587ef4;
+$secondary-color: #363d55;
+$light-color: #f7f9fd;
+$error-color: #ff465a;
+$box-shadow-color: rgba(28, 0, 80, 0.06);
+$transition-duration: 0.3s;
+$gradient-bg: linear-gradient(135deg, #6d83f2, #8f87f4, #bf79f4, #f473d4);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #fdd835, #f97f51, #f78ca0, #ffffff);
+    min-height: 100vh; /* Ensure it covers the entire viewport */
+}
+
+.wrapper {
+    width: 90%;
+    font-size: 16px;
+    max-width: 43.753em;
+    margin: 1em auto;
+    background: $gradient-bg; /* Apply gradient background */
+    border-radius: 1em;
+    padding: 2em;
+    box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.1);
+    transition: all $transition-duration ease-in-out;
+    
+    &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 1em 2em rgba(28, 0, 80, 0.15);
+    }
+}
+
+.container {
+    width: 100%;
+}
+
+.sub-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper h3 {
+    color: $secondary-color;
+    font-weight: 500;
+    margin-bottom: 0.6em;
+}
+
+.container input {
+    display: block;
+    width: 100%;
+    padding: 0.6em 0.8em;
+    border: 1px solid #d0d0d0;
+    border-radius: 0.4em;
+    color: #414a67;
+    outline: none;
+    font-weight: 400;
+    margin-bottom: 1em;
+    transition: all $transition-duration ease-in-out;
+
+    &:focus {
+        border-color: $primary-color;
+        box-shadow: 0 0 0.5em rgba(28, 0, 80, 0.2);
+    }
+}
+
+.total-amount-container, .user-amount-container {
+    background: #fff;
+    padding: 1.5em 1.2em;
+    border-radius: 0.6em;
+    box-shadow: 0 0.6em 1.2em $box-shadow-color;
+    transition: all $transition-duration ease-in-out;
+    
+    &:hover {
+        transform: translateY(-0.2em);
+        box-shadow: 0 1em 2em rgba(28, 0, 80, 0.15);
+    }
+}
+
+.output-container {
+    background: $gradient-bg;
+    color: #fff;
+    border-radius: 0.5em;
+    box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.1);
+    margin: 2em 0;
+    padding: 1.5em;
+    transition: all $transition-duration ease-in-out;
+}
+
+.output-container p {
+    font-weight: 500;
+    margin-bottom: 0.8em;
+}
+
+.output-container span {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.submit {
+    font-size: 1.1em;
+    margin-top: 1em;
+    background-image: $gradient-bg;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border-radius: 0.4em;
+    cursor: pointer;
+    transition: background $transition-duration ease-in-out;
+
+    &:hover {
+        background-image: linear-gradient(135deg, #4663c6, $primary-color);
+    }
+}
+
+.list {
+    background-color: #fff;
+    padding: 2em 1.5em;
+    box-shadow: 0 0.6em 1.2em rgba(28, 0, 80, 0.06);
+    border-radius: 0.8em;
+    transition: all $transition-duration ease-in-out;
+}
+
+.sublist-content {
+    width: 100%;
+    border-left: 0.4em solid $primary-color;
+    margin-bottom: 1em;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr 1fr;
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product {
+    font-weight: 500;
+    color: $secondary-color;
+}
+
+.amount {
+    color: #414a67;
+    margin-left: 20%;
+}
+
+.icons-container {
+    width: 5em;
+    margin: 1.2em;
+    align-items: center;
+}
+
+.product-title {
+    margin-bottom: 1.2em;
+}
+
+.hide {
+    display: none;
+}
+
+.error {
+    color: $error-color;
+    font-size: 0.9em;
+}
+
+.edit {
+    margin-left: auto;
+}
+
+.edit, .delete {
+    background: transparent;
+    cursor: pointer;
+    margin-right: 1.5em;
+    border: none;
+    color: $primary-color;
+    transition: color $transition-duration ease-in-out;
+
+    &:hover {
+        color: darken($primary-color, 10%);
+    }
+}
