@@ -64,12 +64,6 @@ To work with SCSS, you can use the **Live Sass Compiler** extension for real-tim
 - **[Font Awesome](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css)**: For icons (edit, delete).
 - **[Chart.js](https://cdn.jsdelivr.net/npm/chart.js)**: To visualize expenses by category in a pie chart.
 
-## 🚀 Future Enhancements
-
-- **💾 Data Persistence**: Save budget data with local storage or backend integration.
-- **🔍 Advanced Filtering**: Enable filtering by category, date, or amount.
-- **📊 Expense Insights**: Add summaries or trends for expense tracking over time.
-
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to fork this repository, make changes, and submit a pull request.
