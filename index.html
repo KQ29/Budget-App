@@ -1,39 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Budget App with Chart</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-
 <body>
-
     <div class="wrapper">
         <div class="container">
+            <!-- Budget input and controls -->
             <div class="sub-container">
                 <div class="total-amount-container">
                     <h3>Budget</h3>
-                    <p class="hide error" id="budget-error">
-                        Value cannot be empty or negative
-                    </p>
+                    <p class="hide error" id="budget-error">Value cannot be empty or negative</p>
                     <input type="number" id="total-amount" placeholder="Enter Total Amount">
-                    <button class="submit" id="total-amount-button">
-                        Set Budget
-                    </button>
+                    <button class="submit" id="total-amount-button">Set Budget</button>
                 </div>
-
                 <div class="user-amount-container">
                     <h3>Expenses</h3>
-                    <p class="hide error" id="product-title-error">
-                        Values cannot be empty
-                    </p>
+                    <p class="hide error" id="product-title-error">Values cannot be empty</p>
                     <input type="text" class="product-title" id="product-title" placeholder="Enter Title Of Product">
                     <input type="number" id="user-amount" placeholder="Enter Cost Of Product">
-                    <select id="category-select"> 
+                    <select id="category-select">
                         <option value="0">Food</option>
                         <option value="1">Transport</option>
                         <option value="2">Entertainment</option>
@@ -44,6 +35,7 @@
                 </div>
             </div>
 
+            <!-- Budget and expense display -->
             <div class="output-container flex-space">
                 <div>
                     <p>Total Budget</p>
@@ -59,12 +51,13 @@
                 </div>
             </div>
 
+            <!-- Show/Hide Diagram button and chart container -->
             <button id="show-diagram" class="submit">Show Diagram</button>
-
-            <div class="chart-container hide" id="chart-container"> 
-                <canvas id="expensesChart"></canvas> 
+            <div class="chart-container hide" id="chart-container">
+                <canvas id="expensesChart"></canvas>
             </div>
 
+            <!-- Expenses List -->
             <div class="list">
                 <h3>Expenses List</h3>
                 <div class="list-container" id="list"></div>
@@ -72,8 +65,8 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
-    <script src="chart.js"></script>
+    <!-- JavaScript modules -->
+    <script type="module" src="script.js"></script>
+    <script type="module" src="database.js"></script>    
 </body>
-
 </html>
