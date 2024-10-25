@@ -34,7 +34,7 @@ This project is a sleek budget management application that lets you track your b
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/your-username/budget-app.git
+    git clone https://github.com/KQ29/budget-app.git
     ```
 2. **Navigate to the Project Directory**:
     ```bash
